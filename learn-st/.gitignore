@@ -1,0 +1,12 @@
+# Ignore compiled binaries
+*.exe
+*.o
+*.out
+
+# Ignore temporary files
+*~
+.DS_Store
+
+# Ignore sensitive information
+config.ini
+passwords.txt
