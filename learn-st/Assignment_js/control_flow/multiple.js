@@ -2,7 +2,7 @@
 
 const input=require('prompt-sync')();
 let number=parseInt(input("Enter the number:"))
-if(number %3===0){
+if(number%3===0){
     console.log(number+"is multiple of 3")
 }
 else{
