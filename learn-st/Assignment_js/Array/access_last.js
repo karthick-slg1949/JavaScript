@@ -3,3 +3,4 @@
 
 let eid=[101,102,103,104]
 console.log(eid.pop())
+// console.log(eid.length-1)
