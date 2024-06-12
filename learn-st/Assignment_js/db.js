@@ -26,7 +26,7 @@
     arun.style.backgroundColor='green'
  }
  function bala(){
-    let vikram=document.getElementsByTagName('input')[1]
-    console.log(vikram)
-    vikram.style.backgroundColor='green'
+   let int_tag_ref=document.getElementsByTagName('input')[1]
+   let uname=int_tag_ref.value
+   int_tag_ref.value=uname.toUpperCase()
  }

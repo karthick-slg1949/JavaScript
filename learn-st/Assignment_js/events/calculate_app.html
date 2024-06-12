@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate App</title>
+</head>
+<body>
+    <style>
+        div{
+            width: 300px;
+            height: 380px;
+            border-style: solid;
+            background-color: aqua;
+            margin-left: 350px;
+            margin-top: 25px;
+            padding-top: 10px;
+            padding-bottom: unset;
+        }
+    </style>
+    <div>
+    <form>
+        <label style="font-size: x-large;" class="calculator">calculator</label>
+    <input type="text" style="width: 250px; height: 30px; padding-left: 43px;" id="display()" readonly class="display"><br><br>
+    <button style="height: 50px; width: 70px; font-size: large;" class="button" onclick="appendNumber(1)">1</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="appendNumber(2)">2</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">3</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="setoperation('add')">+</button><br><br>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">4</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">5</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">6</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="setoperation('subtract')">-</button><br><br>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">7</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">8</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">9</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="setoperation('multiply')">*</button><br><br>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="clearDisplay()">c</button>
+    <button style="height: 50px; width: 70px;font-size: large;"class="button" onclick="appendNumber(2)">0</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="setoperation('divide')">/</button>
+    <button style="height: 50px; width: 70px;font-size: large;" class="button" onclick="calculate()">=</button>
+</form>
+    </div>
+</body>
+<script src="calculate.js" type="text/javascript"></script>
+
+</html>
