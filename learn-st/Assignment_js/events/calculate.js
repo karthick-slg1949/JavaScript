@@ -1,54 +1,31 @@
-let display=document.getElementById('display')
-let currentNumber=''
-let previousNumber=''
-let operation=null
+class calculator{
+    constructor(){
+        this.textbox=document.getElementById('textbox')
+        this.textbox.value=0
 
-function appendNumber(number){
-    currentNumber+=number
-    updateDisplay()
-}
-function setoperation(op){
-    if(currentNumber==='')
-        return
-    if(previousNumber!==''){
-        calculate()
+        document.getElementById('button1').addEventListener('click',()=>this.handleButtonclick(1))
+        document.getElementById('button2').addEventListener('click',()=>this.handleButtonclick(2))
+        document.getElementById('button3').addEventListener('click',()=>this.handleButtonclick(3))
+        document.getElementById('button4').addEventListener('click',()=>this.handleButtonclick("+"))
+        document.getElementById('button5').addEventListener('click',()=>this.handleButtonclick(4))
+        document.getElementById('button6').addEventListener('click',()=>this.handleButtonclick(5))
+        document.getElementById('button7').addEventListener('click',()=>this.handleButtonclick(6))
+        document.getElementById('button8').addEventListener('click',()=>this.handleButtonclick("-"))
+        document.getElementById('button9').addEventListener('click',()=>this.handleButtonclick(7))
+        document.getElementById('button10').addEventListener('click',()=>this.handleButtonclick(8))
+        document.getElementById('button11').addEventListener('click',()=>this.handleButtonclick(9))
+        document.getElementById('button12').addEventListener('click',()=>this.handleButtonclick("*"))
+        document.getElementById('button13').addEventListener('click',()=>this.handleButtonclick("."))
+        document.getElementById('button14').addEventListener('click',()=>this.handleButtonclick(0))
+        document.getElementById('button15').addEventListener('click',()=>this.handleButtonclick("/"))
+        document.getElementById('button16').addEventListener('click',()=>this.handleButtonclick("="))
     }
-    operation=op
-    previousNumber=currentNumber
-    currentNumber=''
-}
-function calculate(){
-    let result
-    const prev=parseFloat(previousNumber)
-    const current=parseFloat(currentNumber)
-    if(isNaN(prev)||isNaN(current))return
-    switch(operation){
-        case 'add':
-            result=prev+current
-            break
-            case 'subtract':
-                result=prev-current
-                break
-                case 'multiply':
-                    result=prev*current
-                    break
-                    case 'divide':
-                    result=prev/current
-                    break
-                    default:
-                         return
+    handleButtonclick(number){
+        if(parseFloat(this.textbox.value)>0){
+            this.textbox.value+=number.toString()
+        }else{
+            this.textbox.value=number.toString()
+        }
     }
-    currentNumber=result
-    operation=undefined
-    previousNumber=''
-    updateDisplay()
 }
-function clearDisplay(){
-    currentNumber=''
-    previousNumber=''
-    operation=null
-    updateDisplay()
-}
-function updateDisplay(){
-    display.value=currentNumber
-}
+document.addEventListener('DOMContentLoaded',()=>calculator())
