@@ -2,6 +2,7 @@
 let timerElement=document.getElementsByTagName('p')[0]
 //set initial time to 30 seconds
 let timeLeft=30
+
 //function to update the timer every second
 let timerInterval=setInterval(() => {
     timerElement.textContent=timeLeft
@@ -13,8 +14,6 @@ let timerInterval=setInterval(() => {
         clearInterval(timerInterval)
         //optionally perform any actionwhen the timer reaches zero
         timerElement.textContent="timesup!"
-        alert("your order confirmed")
     }
-},1000);
-
+},500);
 setInterval(()=>{document.getElementsByTagName('p')[1].innerHTML=new Date().toLocaleTimeString()},1000)
