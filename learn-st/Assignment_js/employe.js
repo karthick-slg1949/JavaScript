@@ -1,7 +1,7 @@
 class Employee{
     //is template to cunstruct object.
 }
-let e1=new Employee(1)
+let e1=new Employee()
 let e2=new Employee()
 let e3=new Employee()
 
