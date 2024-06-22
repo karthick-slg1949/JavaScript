@@ -1008,9 +1008,9 @@ function displayData(){
             if (emp.gender==="Male"){
         rows=rows +`<tr>
         <td>${emp.id}</td>
-                <td>${emp.name}</td>
-                        <td>${emp.email}</td>
-                                                <td>${emp.gender}</td>
+        <td>${emp.name}</td>
+        <td>${emp.email}</td>
+        <td>${emp.gender}</td>
         </tr>`
     }
 }
