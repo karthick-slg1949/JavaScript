@@ -16,6 +16,6 @@ let cars=[
 //     return car.color==="White"
 // })
 let new_cars=cars.filter((car)=>{
-    return car.price
+    return car.price>5000000
 })
-console.log(White_cars)
+console.log(new_cars)
